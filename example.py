@@ -1,6 +1,6 @@
 import re
 import time
-from main import FlexibleWebscraper, SimplifiedWebscraper
+from webscraper_v1 import FlexibleWebscraper, SimplifiedWebscraper
 import pandas as pd
 
 
