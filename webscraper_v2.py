@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from print_prettier import printred, printgreen, printyellow, printblue, printfinish, printcyan
 import re
+import time
+import random
 
 
 class FlexibleWebscraper_V2:
@@ -17,10 +19,12 @@ class FlexibleWebscraper_V2:
         self.baseurl = self.set_param_if_valid('baseurl', '')
         self.bs4_multi_config = self.set_param_if_valid('bs4_multi', {})
         self.bs4_single_config = self.set_param_if_valid('bs4_single', {})
-        self.regex_config = self.set_param_if_valid('regex', {})
+        self.regex_config = self.set_param_if_valid('regex_config', {})
 
         self.soup = BeautifulSoup(requests.get(self.url).text, 'html.parser')
-        self.soupy_text = self.soup.text
+        self.soupy_text = str(self.soup)
+        with open('soupy_text.log', 'w') as f:
+            f.write(self.soupy_text)
 
     def set_param_if_valid(self, param, default, required=False):
         if param in self.kwargs:
@@ -40,9 +44,24 @@ class FlexibleWebscraper_V2:
         paragraphs = self.soup.find_all('p')
         return '\n'.join([paragraph.text for paragraph in paragraphs]).lstrip()[1:]
 
-    def regex_pass(self, key, regex):
-        printred('regex_pass: regex: {}'.format(regex))
-        pass
+    def regex_pass(self, key, regexstr):
+        printblue('regex_pass: regexstr: {}, key: {}'.format(
+            regexstr, key.upper()))
+
+        match = re.findall(regexstr, self.soupy_text)
+
+        if len(match) == 0:
+            printyellow(
+                'No elements found for: {} Pass: {}\n'.format(key, 'regex_pass'))
+            return -1
+        elif len(match) > 1:
+            printyellow(
+                'Multiple elements found for: {} Pass: {}\n'.format(key, 'regex_pass'))
+            return ' '.join(match).strip()
+
+        printgreen('Found regex key: {}\n Result {}\n Pass: {}\n'.format(
+            key.upper(), match[0].strip(), 'regex_pass'))
+        return match[0].strip()
 
     def bs4_multi(self, key, element, attr=None, name=None):
         printblue('bs4_multi: element: {}, attr: {}, name: {}'.format(
@@ -53,7 +72,7 @@ class FlexibleWebscraper_V2:
 
         if len(element) == 0:
             printyellow(
-                'No elements found for: {} Pass: {}'.format(key, 'bs4_multi'))
+                'No elements found for: {} Pass: {}\n'.format(key, 'bs4_multi'))
             return -1
 
         result = ' '.join([element.text for element in element]).strip()
@@ -68,11 +87,11 @@ class FlexibleWebscraper_V2:
         if attr != None and name != None:
             element = self.soup.find(element, {attr: name})
 
-        if len(element) == 0:
-            printyellow('No elements found for: {} Pass: {}'.format(
-                element, 'bs4_single'))
+        if not element:
+            printyellow('No elements found for: {} Pass: {}\n'.format(
+                key, 'bs4_single'))
             return -1
-        printgreen('Found Single key: {}\n Result {}\n Pass: {}'.format(
+        printgreen('Found Single key: {}\n Result {}\n Pass: {}\n'.format(
             key.upper(), element.text, 'bs4_multi'))
         return element.text
 
@@ -100,10 +119,14 @@ class FlexibleWebscraper_V2:
             links = [element['href']
                      for element in self.soup.find_all(element)]
 
+        unique_links = list(set(links))
+        links = unique_links
+
         if len(links) == 0:
             raise Exception('No links found')
+
         print()
-        printyellow('Found {} links\n'.format(len(links)))
+        printblue('Found {} links\n'.format(len(links)))
         return links
 
     def automate_scrape(self):
@@ -120,12 +143,13 @@ class FlexibleWebscraper_V2:
             with FlexibleWebscraper_V2(childparams) as scraper:
                 data = scraper.find_article_data()
                 self.pc_article_data_pretty(data)
-            break
+            time.sleep(2 + random.randint(0, 3))
 
     def pc_article_data_pretty(self, data):
         print()
         printfinish()
         printfinish('Title: {}'.format(data['title']))
+        printfinish('Author: {}'.format(data['author']))
         printfinish('Time: {}'.format(data['time']))
         printfinish('Content: {}'.format(data['content'][:100]))
         printfinish('URL: {}'.format(data['url']))
@@ -142,10 +166,11 @@ params = {
     },
     'bs4_single': {
         'title': ('title', None, None),
+        # 'author': ('p', 'id', 'newBylineAuthor')
 
     },
-    'regex': {
-        'author': 'by (.*)'
+    'regex_config': {
+        'author': r'Posted by (.*?)</'
     }
 }
 

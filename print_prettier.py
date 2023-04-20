@@ -19,7 +19,7 @@ class printprettier():
 
 class printred(printprettier):
     def __init__(self, text='?bar'):
-        super().__init__(31, f'[GOOD] {text}')
+        super().__init__(31, f'[BAD] {text}')
     
 class printgreen(printprettier):
     def __init__(self, text='?bar'):
@@ -39,4 +39,4 @@ class printfinish(printprettier):
 
 class printcyan(printprettier):
     def __init__(self, text='?bar'):
-        super().__init__(36, text)
+        super().__init__(36, f'[ID] {text}')

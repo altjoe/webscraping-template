@@ -12,11 +12,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- METADATA -->
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<title>Beyond automatic differentiation – Google AI Blog</title>
-<meta content="Beyond automatic differentiation" name="twitter:title"/>
-<meta content="Beyond automatic differentiation" property="og:title"/>
-<meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/w1200-h630-p-k-no-nu/AutoBound-Crop.gif" property="og:image"/>
-<meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/w1200-h630-p-k-no-nu/AutoBound-Crop.gif" name="twitter:image"/>
+<title>Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots – Google AI Blog</title>
+<meta content="Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots" name="twitter:title"/>
+<meta content="Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots" property="og:title"/>
+<meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/w1200-h630-p-k-no-nu/Robotic%20RL%20hero.jpeg" property="og:image"/>
+<meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/w1200-h630-p-k-no-nu/Robotic%20RL%20hero.jpeg" name="twitter:image"/>
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css?family=Google+Sans:+400,500,700|Product+Sans:400|Roboto:300,400,500,700|Roboto+Mono:500&amp;display=swap" media="all" rel="stylesheet"/>
 <!-- GOOGLE ANALYTICS SCRIPT -->
@@ -9947,7 +9947,7 @@ display: flex;
 
 --></style>
 <!-- BLOGGER DEFAULT ELEMENTS + CUSTOM CHANGES -->
-<link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8474926331452026626&amp;zx=36fce095-b026-4daf-8728-5b2a8440a3c6" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8474926331452026626&amp;zx=36fce095-b026-4daf-8728-5b2a8440a3c6" rel="stylesheet"/></noscript>
+<link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8474926331452026626&amp;zx=ab42896b-2c89-4a96-9b64-929ee9b3e062" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8474926331452026626&amp;zx=ab42896b-2c89-4a96-9b64-929ee9b3e062" rel="stylesheet"/></noscript>
 <meta content="ca-host-pub-1556223355139109" name="google-adsense-platform-account"/>
 <meta content="blogspot.com" name="google-adsense-platform-domain"/>
 </head>
@@ -9969,7 +9969,7 @@ Skip to main content
 <div class="header__hamburger-burger"></div>
 </a>
 <a class="header__lockup" href="https://research.google">
-<span class="off-screen">Beyond automatic differentiation</span>
+<span class="off-screen">Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots</span>
 <div class="header__logo">
 <img alt="Google Research" src="https://research.google/static/images/blog/google-research.svg"/>
 </div>
@@ -9977,7 +9977,7 @@ Skip to main content
 <!-- MOBILE MENU -->
 <nav class="header__nav" id="header__nav">
 <a class="header__lockup" href="https://research.google">
-<span class="off-screen">Beyond automatic differentiation</span>
+<span class="off-screen">Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots</span>
 <div class="header__logo">
 <img alt="Google Research" src="https://research.google/static/images/blog/google-research.svg"/>
 </div>
@@ -10117,7 +10117,7 @@ Skip to main content
                   </nav>
 <!-- BLOG TITLE -->
 <h1 class="hero__title">
-<span class="wrap">Beyond automatic differentiation</span>
+<span class="wrap">Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots</span>
 <!-- SEARCH RESULT TITLE -->
 </h1>
 </div>
@@ -10142,9 +10142,9 @@ Skip to main content
 <div class="post-outer full-post">
 <span class="byline post-timestamp">
 <!--Can't find substitution for tag [byline.label]-->
-<meta content="http://ai.googleblog.com/2023/04/beyond-automatic-differentiation.html"/>
-<time class="eyebrow" datetime="2023-04-14T08:00:00-07:00" title="2023-04-14T08:00:00-07:00">
-Friday, April 14, 2023
+<meta content="http://ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html"/>
+<time class="eyebrow" datetime="2023-04-13T12:31:00-07:00" title="2023-04-13T12:31:00-07:00">
+Thursday, April 13, 2023
 </time>
 </span>
 <p class="article-byline" id="newBylineAuthor"></p>
@@ -10156,115 +10156,80 @@ Friday, April 14, 2023
 </div>
 </div>
 <div class="post-body-container">
-<div class="post-body entry-content float-container" id="post-body-5107802027865733485">
-<span class="byline-author">Posted by Matthew Streeter, Software Engineer, Google Research</span>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/s660/AutoBound-Crop.gif" style="display: none;"/>
-<p>
-<a href="https://en.wikipedia.org/wiki/Derivative">Derivatives</a> play a central role in optimization and machine learning. By locally approximating a <a href="https://developers.google.com/machine-learning/crash-course/descending-into-ml/training-and-loss">training loss</a>, derivatives guide an optimizer toward lower values of the loss. Automatic differentiation frameworks such as <a href="https://www.tensorflow.org/">TensorFlow</a>, <a href="https://pytorch.org/">PyTorch</a>, and <a href="https://github.com/google/jax">JAX</a> are an essential part of modern machine learning, making it feasible to use gradient-based optimizers to train very complex models.
-</p>
+<div class="post-body entry-content float-container" id="post-body-8521407697493439122">
+<span class="byline-author">Posted by Sergey Levine, Research Scientist, and Alexander Herzog, Staff Research Software Engineer, Google Research, Brain Team</span><div>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/s320/Robotic%20RL%20hero.jpeg" style="display: none;"/>
+<p>Reinforcement learning (RL) can enable robots to learn complex behaviors through trial-and-error interaction, getting better and better over time. Several of our prior works explored how RL can enable intricate robotic skills, such as <a href="https://ai.googleblog.com/2018/06/scalable-deep-reinforcement-learning.html">robotic grasping</a>, <a href="https://ai.googleblog.com/2021/04/multi-task-robotic-reinforcement.html">multi-task learning</a>, and even playing <a href="https://ai.googleblog.com/2022/10/table-tennis-research-platform-for.html">table tennis</a>. Although robotic RL has come a long way, we still don't see RL-enabled robots in everyday settings. The real world is complex, diverse, and changes over time, presenting a major challenge for robotic systems. However, we believe that RL should offer us an excellent tool for tackling precisely these challenges: by continually practicing, getting better, and learning on the job, robots should be able to <a href="https://sites.google.com/corp/view/efficient-ft/home">adapt to the world as it changes around them</a>.</p>
 <a name="more"></a>
 <p>
-But are derivatives all we need? By themselves, derivatives only tell us how a function behaves on an <a href="https://en.wikipedia.org/wiki/Infinitesimal">infinitesimal</a> scale. To use derivatives effectively, we often need to know more than that. For example, to choose a <a href="https://en.wikipedia.org/wiki/Learning_rate">learning rate</a> for <a href="https://en.wikipedia.org/wiki/Gradient_descent">gradient descent</a>, we need to know something about how the loss function behaves over a small but <em>finite</em> window. A finite-scale analogue of automatic differentiation, if it existed, could help us make such choices more effectively and thereby speed up training.
-</p><p></p>
-<p>
-In our new paper "<a href="https://arxiv.org/pdf/2212.11429.pdf">Automatically Bounding The Taylor Remainder Series: Tighter Bounds and New Applications</a>", we present an algorithm called AutoBound that computes polynomial upper and lower bounds on a given function, which are valid over a user-specified <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)">interval</a>. We then begin to explore AutoBound's applications. Notably, we present a meta-optimizer called SafeRate that uses the upper bounds computed by AutoBound to derive learning rates that are guaranteed to monotonically reduce a given loss function, without the need for time-consuming hyperparameter tuning. We are also making AutoBound available as an <a href="https://github.com/google/autobound">open-source library</a>.</p>
+In “<a href="https://rl-at-scale.github.io/assets/rl_at_scale.pdf">Deep RL at Scale: Sorting Waste in Office Buildings with a Fleet of Mobile Manipulators</a>”, we discuss how we studied this problem through a recent large-scale experiment, where we deployed a fleet of 23 RL-enabled robots over two years in Google office buildings to sort waste and recycling. Our robotic system combines scalable deep RL from real-world data with bootstrapping from training in simulation and auxiliary object perception inputs to boost generalization, while retaining the benefits of end-to-end training, which we validate with 4,800 evaluation trials across 240 waste station configurations.</p>
+<div style="line-height: 40%;">
 <br/>
-<h2>The AutoBound algorithm</h2>
-<p>
-Given a function <code><em>f</em></code> and a reference point <code><em>x<sub>0</sub></em></code>, AutoBound computes polynomial upper and lower bounds on <code><em>f</em></code> that hold over a user-specified interval called a <em>trust region</em>. Like <a href="https://en.wikipedia.org/wiki/Taylor_series">Taylor polynomials</a>, the bounding polynomials are equal to <code><em>f</em></code> at <code><em>x<sub>0</sub></em></code>. The bounds become tighter as the trust region shrinks, and approach the corresponding Taylor polynomial as the trust region width approaches zero.
-</p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb0WLo5_NiobuGRFacHeB-xYdA4i6kQEFF0BDeF5FkXuqHHTX-ddE1qzK1ekOgtOwu8c3JHknR8FFU14sgobiTj5tx23yn183Yf8KP6ca5O5y6nKRmgaYi-2Vs8ZL4Gt9kxITBlmNSc6Zmm3UAamc84Ry_TR1GqIiexxrkHVCREuKSh9Y5GT7cIBDGZQ/s3091/taylor_enclosure_animation.gif" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="2217" data-original-width="3091" height="459" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb0WLo5_NiobuGRFacHeB-xYdA4i6kQEFF0BDeF5FkXuqHHTX-ddE1qzK1ekOgtOwu8c3JHknR8FFU14sgobiTj5tx23yn183Yf8KP6ca5O5y6nKRmgaYi-2Vs8ZL4Gt9kxITBlmNSc6Zmm3UAamc84Ry_TR1GqIiexxrkHVCREuKSh9Y5GT7cIBDGZQ/w640-h459/taylor_enclosure_animation.gif" width="640"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Automatically-derived quadratic upper and lower bounds on a one-dimensional function f, centered at x<sub>0</sub>=0.5. The upper and lower bounds are valid over a user-specified trust region, and become tighter as the trust region shrinks.</td></tr></tbody></table>
-<p>
-Like automatic differentiation, AutoBound can be applied to any function that can be implemented using standard mathematical operations. In fact, AutoBound is a generalization of <a href="https://openreview.net/pdf?id=SkxEF3FNPH">Taylor mode automatic differentiation</a>, and is equivalent to it in the special case where the trust region has a width of zero.
-</p>
-<p>
-To derive the AutoBound algorithm, there were two main challenges we had to address:
-</p>
-<ol>
-<li>We had to derive polynomial upper and lower bounds for various elementary functions, given an arbitrary reference point and arbitrary trust region.
-
-</li><li>We had to come up with an analogue of the <a href="https://en.wikipedia.org/wiki/Chain_rule">chain rule</a> for combining these bounds.
-</li>
-</ol>
-<br/>
-<h2>Bounds for elementary functions</h2>
-<p>
-For a variety of commonly-used functions, we derive <em>optimal</em> polynomial upper and lower bounds in closed form. In this context, "optimal" means the bounds are as tight as possible, among all polynomials where only the maximum-<a href="https://en.wikipedia.org/wiki/Degree_of_a_polynomial">degree coefficient</a> differs from the Taylor series. Our theory applies to elementary functions, such as <code><em>exp</em></code> and <code><em>log</em></code>, and common neural network activation functions, such as <code><a href="https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf">ReLU</a></code> and <code><a href="https://arxiv.org/pdf/1710.05941.pdf">Swish</a></code>. It builds upon and generalizes <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3129714/pdf/nihms90438.pdf">earlier work</a> that applied only to quadratic bounds, and only for an unbounded trust region.
-</p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5WY6ZTX0Rpwa4dpCoa4pyu5nFBoGDFnDqpQrVqHkOmTAAXivb7AhueTYHGwWFJLUYuvP6daRXsp8A7k_U1kJ8OaSHhW3TyIFAvNeoIOki9ek9GY95DXAfGzZXLqsKlHeb2_8Z4yHMBx1kPYJx4LXU_mQQO0u0JOLgWHaOZqYflTrKd6n9Z4NouU5wAQ/s1999/image7.png" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1446" data-original-width="1999" height="463" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5WY6ZTX0Rpwa4dpCoa4pyu5nFBoGDFnDqpQrVqHkOmTAAXivb7AhueTYHGwWFJLUYuvP6daRXsp8A7k_U1kJ8OaSHhW3TyIFAvNeoIOki9ek9GY95DXAfGzZXLqsKlHeb2_8Z4yHMBx1kPYJx4LXU_mQQO0u0JOLgWHaOZqYflTrKd6n9Z4NouU5wAQ/w640-h463/image7.png" width="640"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Optimal quadratic upper and lower bounds on the exponential function, centered at x<sub>0</sub>=0.5 and valid over the interval [0, 2].</td></tr></tbody></table>
-<br/>
-<h2>A new chain rule</h2>
-<p>
-To compute upper and lower bounds for arbitrary functions, we derived a generalization of the chain rule that operates on polynomial bounds. To illustrate the idea, suppose we have a function that can be written as
-</p>
-<div align="center">
-<pre class="prettyprint">f(x) = g(h(x))
-</pre>
 </div>
+<h2>Problem setup</h2>
 <p>
-and suppose we already have polynomial upper and lower bounds on <code><em>g</em></code> and <code><em>h</em></code>. How do we compute bounds on <code><em>f</em></code>?
-
-</p><p>
-The key turns out to be representing the upper and lower bounds for a given function as a <em>single</em> polynomial whose highest-degree coefficient is an <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)">interval</a> rather than a scalar. We can then plug the bound for <code><em>h</em></code> into the bound for <code><em>g</em></code>, and convert the result back to a polynomial of the same form using <a href="https://epubs.siam.org/doi/book/10.1137/1.9780898717716">interval arithmetic</a>. Under suitable assumptions about the trust region over which the bound on <code><em>g</em></code> holds, it can be shown that this procedure yields the desired bound on <code><em>f</em></code>.
-
-</p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXlrNk32-9fDM8A8ooF6TnLk3CNpNpo-QRl79dL9PXRNRa4O4l6gX2NxfBH9WxVFoG0Ks7R80E3-HxeORDu_OjSI446cntCytscoKTPODAHUU20h8hkXi3EV0mJLsrm4dCT5iROfgi5_2rLX0aM1S3oMREuYqKAB_yy9B2wo4aV2bY3qxPxzMIKS7c9Q/s1999/image3.png" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="591" data-original-width="1999" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXlrNk32-9fDM8A8ooF6TnLk3CNpNpo-QRl79dL9PXRNRa4O4l6gX2NxfBH9WxVFoG0Ks7R80E3-HxeORDu_OjSI446cntCytscoKTPODAHUU20h8hkXi3EV0mJLsrm4dCT5iROfgi5_2rLX0aM1S3oMREuYqKAB_yy9B2wo4aV2bY3qxPxzMIKS7c9Q/s16000/image3.png"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">The interval polynomial chain rule applied to the functions h(x) = sqrt(x) and g(y) = exp(y), with x<sub>0</sub>=0.25 and trust region [0, 0.5].</td></tr></tbody></table>
-<p>
-Our chain rule applies to one-dimensional functions, but also to multivariate functions, such as matrix multiplications and convolutions.
+When people don’t sort their trash properly, batches of recyclables can become contaminated and compost can be improperly discarded into landfills. In our experiment, a robot roamed around an office building searching for “waste stations” (bins for recyclables, compost, and trash). The robot was tasked with approaching each waste station to sort it, moving items between the bins so that all recyclables (cans, bottles) were placed in the recyclable bin, all the compostable items (cardboard containers, paper cups) were placed in the compost bin, and everything else was placed in the landfill trash bin. Here is what that looks like:
 </p>
 <br/>
-<h2>Propagating bounds</h2>
-<p>
-Using our new chain rule, AutoBound propagates interval polynomial bounds through a computation graph from the inputs to the outputs, analogous to <a href="https://en.wikipedia.org/wiki/Automatic_differentiation#Forward_accumulation">forward-mode automatic differentiation</a>.
-</p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb3Iw5MwfRFRP6MUo8JdubaBYOMqZqbUI-Xjjla07M8_faGpdxsI_TfRnS3OZjrUGDQrie_mwPCroYO_2xKiutmjUCCSHSOKQHqI8tbEYDRiIE-gD4UmV252Z1IKFsR6wYRVZtT9X1bbHdxrJofymjtFTlm3lrTG8tR28hOI8wNmfUwl_v8DnGluTRYw/s960/image2.gif" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="161" data-original-width="960" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb3Iw5MwfRFRP6MUo8JdubaBYOMqZqbUI-Xjjla07M8_faGpdxsI_TfRnS3OZjrUGDQrie_mwPCroYO_2xKiutmjUCCSHSOKQHqI8tbEYDRiIE-gD4UmV252Z1IKFsR6wYRVZtT9X1bbHdxrJofymjtFTlm3lrTG8tR28hOI8wNmfUwl_v8DnGluTRYw/s16000/image2.gif"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Forward propagation of interval polynomial bounds for the function f(x) = exp(sqrt(x)).  We first compute (trivial) bounds on x, then use the chain rule to compute bounds on sqrt(x) and exp(sqrt(x)).</td></tr></tbody></table>
-<p>
-To compute bounds on a function <code><em>f(x)</em></code>, AutoBound requires memory proportional to the dimension of <code><em>x</em></code>. For this reason, practical applications apply AutoBound to functions with a small number of inputs. However, as we will see, this does not prevent us from using AutoBound for neural network optimization.
-
-</p>
+<video autoplay="" loop="" muted="" playsinline="" style="margin-left: 10%; margin-right: 10%;" width="80%"> <source src="https://github.com/rl-at-scale/rl-at-scale.github.io/blob/main/videos/sort_at_rls_1440x810.mp4?raw=true" type="video/mp4"/> </video>
 <br/>
-<h2>Automatically deriving optimizers, and other applications</h2>
-<p>
-What can we do with AutoBound that we couldn't do with automatic differentiation alone?
-</p>
-<p>
-Among other things, AutoBound can be used to automatically derive problem-specific, hyperparameter-free optimizers that converge from any starting point. These optimizers iteratively reduce a loss by first using AutoBound to compute an upper bound on the loss that is tight at the current point, and then minimizing the upper bound to obtain the next point.
-</p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2JJN-D-nFQ7Bl4BYySe3oe4YBFLAnqROlRvrZuRURTicKO8Luhti9I_kuJ1nJKQe4chKqldyddqGXQKBMB1ltXNWKu06SfDxUEjaG52pNCdgyhgNYpo8DQmGnlr5FoSVJSvZMbi0GtD1w60iQF6hV4eRky-SSmfFY2fCUWLKxTcVcMIwVc8T8QyA-6w/s3074/mm_animation.gif" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="2197" data-original-width="3074" height="457" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2JJN-D-nFQ7Bl4BYySe3oe4YBFLAnqROlRvrZuRURTicKO8Luhti9I_kuJ1nJKQe4chKqldyddqGXQKBMB1ltXNWKu06SfDxUEjaG52pNCdgyhgNYpo8DQmGnlr5FoSVJSvZMbi0GtD1w60iQF6hV4eRky-SSmfFY2fCUWLKxTcVcMIwVc8T8QyA-6w/w640-h457/mm_animation.gif" width="640"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Minimizing a one-dimensional logistic regression loss using quadratic upper bounds derived automatically by AutoBound.</td></tr></tbody></table>
-<p>
-Optimizers that use upper bounds in this way are called <a href="https://epubs.siam.org/doi/book/10.1137/1.9781611974409">majorization-minimization</a> (MM) optimizers. Applied to one-dimensional logistic regression, AutoBound rederives an MM optimizer <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3129714/">first published in 2009</a>. Applied to more complex problems, AutoBound derives novel MM optimizers that would be difficult to derive by hand.
-</p>
-<p>
-We can use a similar idea to take an existing optimizer such as <a href="https://arxiv.org/pdf/1412.6980.pdf">Adam</a> and convert it to a hyperparameter-free optimizer that is guaranteed to monotonically reduce the loss (in the full-batch setting). The resulting optimizer uses the same update direction as the original optimizer, but modifies the learning rate by minimizing a one-dimensional quadratic upper bound derived by AutoBound. We refer to the resulting meta-optimizer as SafeRate.
-</p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgutnTe8tbfFqdlv7G1CWmk5LgRRVRIuw2veGSrIOv3N7k-dKGCWZMmIb8n3drlkWcZSc2dcwd2-BmxCm-9I7y5q3lAcCkB17wC2nMrIeSbZeQeck6P2W_bu4VvQ38QkVKr5CDB62pwIV0zEGmG_n_r8oY9vnv92Jv-Dh-ZS3Qb_20QV2rQTEdmRH1_pg/s1656/image8.png" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1094" data-original-width="1656" height="423" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgutnTe8tbfFqdlv7G1CWmk5LgRRVRIuw2veGSrIOv3N7k-dKGCWZMmIb8n3drlkWcZSc2dcwd2-BmxCm-9I7y5q3lAcCkB17wC2nMrIeSbZeQeck6P2W_bu4VvQ38QkVKr5CDB62pwIV0zEGmG_n_r8oY9vnv92Jv-Dh-ZS3Qb_20QV2rQTEdmRH1_pg/w640-h423/image8.png" width="640"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Performance of SafeRate when used to train a single-hidden-layer neural network on a subset of the <a href="https://yann.lecun.com/exdb/mnist/">MNIST</a> dataset, in the full-batch setting.</td></tr></tbody></table>
-<p>
-Using SafeRate, we can create more robust variants of existing optimizers, at the cost of a single additional forward pass that increases the <a href="https://en.wikipedia.org/wiki/Elapsed_real_time">wall time</a> for each step by a small factor (about 2x in the example above).
-</p>
-<p>
-In addition to the applications just discussed, AutoBound can be used for verified <a href="https://en.wikipedia.org/wiki/Numerical_integration">numerical integration</a> and to automatically prove sharper versions of <a href="https://en.wikipedia.org/wiki/Jensen%27s_inequality">Jensen's inequality</a>, a fundamental mathematical inequality used frequently in statistics and other fields.
-</p>
+<br>
+<video autoplay="" loop="" muted="" playsinline="" style="margin-left: 10%; margin-right: 10%;" width="80%"> <source src="https://github.com/rl-at-scale/rl-at-scale.github.io/blob/main/videos/sorty_task_animation.mp4?raw=true" type="video/mp4"/> </video>
 <br/>
-<h2>Improvement over classical bounds</h2>
+<br>
 <p>
-Bounding the <a href="https://en.wikipedia.org/wiki/Taylor%27s_theorem">Taylor remainder term</a> automatically is not a new idea. A classical technique produces degree <code><em>k</em></code> polynomial bounds on a function <code><em>f</em></code> that are valid over a trust region <code>[<em>a</em>, <em>b</em>]</code> by first computing an expression for the <code><em>k</em></code>th derivative of <code><em>f</em></code> (using automatic differentiation), then evaluating this expression over <code>[<em>a</em>,<em>b</em>]</code> using interval arithmetic.
-
-</p><p>
-While elegant, this approach has some inherent limitations that can lead to very loose bounds, as illustrated by the dotted blue lines in the figure below.
+This task is not as easy as it looks. Just being able to pick up the vast variety of objects that people deposit into waste bins presents a major learning challenge. Robots also have to identify the appropriate bin for each object and sort them as quickly and efficiently as possible. In the real world, the robots can encounter a variety of situations with unique objects, like the examples from real office buildings below:
 </p>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgENtTpbXUtRpnOVihpobiGYrw4L_jEUASrWaRvGcPBgTk-HLuy2_gUevqyhtmDMpELAmjYaszDdniJRndog7u8zH-o0Sjp3OrWF5lB4q1nOcyYay8AY2mgE9xGK3ZwRsAfARybfzzO7o2SFIcSWz66Ghyw66tWQYf8rLwxBoG1Zkkagm3I8tQVweYZTg/s1510/image5.jpg" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1107" data-original-width="1510" height="469" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgENtTpbXUtRpnOVihpobiGYrw4L_jEUASrWaRvGcPBgTk-HLuy2_gUevqyhtmDMpELAmjYaszDdniJRndog7u8zH-o0Sjp3OrWF5lB4q1nOcyYay8AY2mgE9xGK3ZwRsAfARybfzzO7o2SFIcSWz66Ghyw66tWQYf8rLwxBoG1Zkkagm3I8tQVweYZTg/w640-h469/image5.jpg" width="640"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Quadratic upper and lower bounds on the loss of a multi-layer <a href="https://en.wikipedia.org/wiki/Perceptron">perceptron</a> with two hidden layers, as a function of the initial learning rate. The bounds derived by AutoBound are much tighter than those obtained using interval arithmetic evaluation of the second derivative.</td></tr></tbody></table>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnyIwIL3posLhbG6D9ka9eeHp8VJqgDSUWoPabIIkWH-bED_Cq2B3BswAerAuVYcG0mVpwtGW4ZeRHJXAfQ_hQXewszOZSEzg_Nae2z5t_ahJOAivUMJDhVQnCUn7R1vM4b5jVlHwQX9XzNXg7IihWgyv5K_pCjA-Ef9CYarhpAvmPJvwtkeHe1H44Yw/s1917/image5.png" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="616" data-original-width="1917" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnyIwIL3posLhbG6D9ka9eeHp8VJqgDSUWoPabIIkWH-bED_Cq2B3BswAerAuVYcG0mVpwtGW4ZeRHJXAfQ_hQXewszOZSEzg_Nae2z5t_ahJOAivUMJDhVQnCUn7R1vM4b5jVlHwQX9XzNXg7IihWgyv5K_pCjA-Ef9CYarhpAvmPJvwtkeHe1H44Yw/s16000/image5.png"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;"></td></tr></tbody></table>
+<div style="line-height: 40%;">
 <br/>
-<h2>Looking forward</h2>
+</div>
+<h2>Learning from diverse experience</h2>
 <p>
-Taylor polynomials have been in use for over three hundred years, and are omnipresent in numerical optimization and scientific computing. Nevertheless, Taylor polynomials have significant limitations, which can limit the capabilities of algorithms built on top of them. Our work is part of a growing literature that recognizes these limitations and seeks to develop a new foundation upon which more robust algorithms can be built.
+Learning on the job helps, but before even getting to that point, we need to bootstrap the robots with a basic set of skills. To this end, we use four sources of experience: (1) a set of simple hand-designed policies that have a very low success rate, but serve to provide some initial experience, (2) a simulated training framework that uses <a href="https://arxiv.org/abs/2011.03148">sim-to-real transfer</a> to provide some initial bin sorting strategies, (3) “robot classrooms” where the robots continually practice at a set of representative waste stations, and (4) the real deployment setting, where robots practice in real office buildings with real trash.</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2P-roxlxTLbkw2aVK5njLi9YtLgi-Vl_aaKe9M2_7AavUymKzykgLImqUtBxG0QnmOwHLS1lq6ikflOoThGU3HyE6-np7sSgI-EK4wv6FuOy_v-62Na5BsNAHZGdmJeo5B6v_8UCl4I8UZqHwn1sYbYJ6Ic3glRETHBisK6z5MJDdNPYUiXk6cMhW0g/s862/image7.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="734" data-original-width="862" height="545" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2P-roxlxTLbkw2aVK5njLi9YtLgi-Vl_aaKe9M2_7AavUymKzykgLImqUtBxG0QnmOwHLS1lq6ikflOoThGU3HyE6-np7sSgI-EK4wv6FuOy_v-62Na5BsNAHZGdmJeo5B6v_8UCl4I8UZqHwn1sYbYJ6Ic3glRETHBisK6z5MJDdNPYUiXk6cMhW0g/w640-h545/image7.png" width="640"/></a></td></tr><tr><td class="tr-caption" style="text-align: center;">A diagram of RL at scale. We bootstrap policies from data generated with a script (<strong>top-left</strong>). We then train a sim-to-real model and generate additional data in simulation (<strong>top-right</strong>). At each deployment cycle, we add data collected in our classrooms (<strong>bottom-right</strong>). We further deploy and collect data in office buildings (<strong>bottom-left</strong>). </td></tr></tbody></table>
+<br/>
+<p>
+Our RL framework is based on <a href="https://ai.googleblog.com/2018/06/scalable-deep-reinforcement-learning.html">QT-Opt</a>, which we previously applied to learn bin grasping in laboratory settings, as well as <a href="https://ai.googleblog.com/2021/04/multi-task-robotic-reinforcement.html">a range of other skills</a>. In simulation, we bootstrap from simple scripted policies and use RL, with a <a href="https://ai.googleblog.com/2021/06/toward-generalized-sim-to-real-transfer.html">CycleGAN-based transfer method</a> that uses <a href="https://arxiv.org/abs/2011.03148">RetinaGAN</a> to make the simulated images appear more life-like.
 </p>
-<p>
-Our experiments so far have only scratched the surface of what is possible using AutoBound, and we believe it has many applications we have not discovered. To encourage the research community to explore such possibilities, we have made AutoBound available as an open-source library built on top of <a href="https://github.com/google/jax">JAX</a>. To get started, visit our <a href="https://github.com/google/autobound">GitHub repo</a>.</p>
+<br>
+<video autoplay="" loop="" muted="" playsinline="" style="margin-left: 10%; margin-right: 10%;" width="80%"> <source src="https://github.com/rl-at-scale/rl-at-scale.github.io/blob/main/videos/sorty_sim_to_real.mp4?raw=true" type="video/mp4"/> </video>
 <br/>
+<br/>
+<p>
+From here, it’s off to the classroom. While real-world office buildings can provide the most representative experience, the throughput in terms of data collection is limited — some days there will be a lot of trash to sort, some days not so much. Our robots collect a large portion of their experience in “robot classrooms.” In the classroom shown below, 20 robots practice the waste sorting task:
+</p>
+<br>
+<video autoplay="" loop="" muted="" playsinline="" style="margin-left: 10%; margin-right: 10%;" width="80%"> <source src="https://github.com/rl-at-scale/rl-at-scale.github.io/blob/main/videos/classrooms_wide.mp4?raw=true" type="video/mp4"/> </video>
+<br/>
+<br/>
+<p>
+While these robots are training in the classrooms, other robots are simultaneously learning on the job in 3 office buildings, with 30 waste stations:
+</p>
+<br>
+<video autoplay="" loop="" muted="" playsinline="" style="margin-left: 10%; margin-right: 10%;" width="80%"> <source src="https://github.com/rl-at-scale/rl-at-scale.github.io/blob/main/videos/sorty_wild_collage_2x3.mp4?raw=true" type="video/mp4"/> </video>
+<br/>
+<br/>
+<div style="line-height: 40%;">
+<br/>
+</div>
+<h2>Sorting performance</h2>
+<p>
+In the end, we gathered 540k trials in the classrooms and 32.5k trials from deployment. Overall system performance improved as more data was collected. We evaluated our final system in the classrooms to allow for controlled comparisons, setting up scenarios based on what the robots saw during deployment. The final system could accurately sort about 84% of the objects on average, with performance increasing steadily as more data was added. In the real world, we logged statistics from three real-world deployments between 2021 and 2022, and found that our system could reduce contamination in the waste bins by between 40% and 50% by weight. <a href="https://rl-at-scale.github.io/assets/rl_at_scale.pdf">Our paper</a> provides further insights on the technical design, ablations studying various design decisions, and more detailed statistics on the experiments.
+</p>
+<div style="line-height: 40%;">
+<br/>
+</div>
+<h2>Conclusion and future work</h2>
+<p>
+Our experiments showed that RL-based systems can enable robots to address real-world tasks in real office environments, with a combination of offline and online data enabling robots to adapt to the broad variability of real-world situations. At the same time, learning in more controlled “classroom” environments, both in simulation and in the real world, can provide a powerful bootstrapping mechanism to get the RL “flywheel” spinning to enable this adaptation. There is still a lot left to do: our final RL policies do not succeed every time, and <a href="https://ai.googleblog.com/2022/12/rt-1-robotics-transformer-for-real.html">larger and more powerful models</a> will be needed to improve their performance and extend them to a broader range of tasks. Other sources of experience, including from other tasks, other robots, and even Internet videos may serve to further supplement the bootstrapping experience that we obtained from simulation and classrooms. These are exciting problems to tackle in the future. Please see the full paper <a href="https://rl-at-scale.github.io/assets/rl_at_scale.pdf">here</a>, and the supplementary video materials on the <a href="https://rl-at-scale.github.io/">project webpage</a>.
+</p>
+<div style="line-height: 40%;">
+<br/>
+</div>
 <h2>Acknowledgements</h2>
 <p>
-<em>This post is based on joint work with Josh Dillon. We thank Alex Alemi and Sergey Ioffe for valuable feedback on an earlier draft of the post.</em>
-</p><p></p>
+<i>This research was conducted by multiple researchers at Robotics at Google and Everyday Robots, with contributions from Alexander Herzog, Kanishka Rao, Karol Hausman, Yao Lu, Paul Wohlhart, Mengyuan Yan, Jessica Lin, Montserrat Gonzalez Arenas, Ted Xiao, Daniel Kappler, Daniel Ho, Jarek Rettinghouse, Yevgen Chebotar, Kuang-Huei Lee, Keerthana Gopalakrishnan, Ryan Julian, Adrian Li, Chuyuan Kelly Fu, Bob Wei, Sangeetha Ramesh, Khem Holden, Kim Kleiven, David Rendleman, Sean Kirmani, Jeff Bingham, Jon Weisz, Ying Xu, Wenlong Lu, Matthew Bennice, Cody Fong, David Do, Jessica Lam, Yunfei Bai, Benjie Holson, Michael Quinlan, Noah Brown, Mrinal Kalakrishnan, Julian Ibarz, Peter Pastor, Sergey Levine and the entire Everyday Robots team.</i></p></br></br></br></br></br></div>
 </div>
 </div>
 <div class="post-bottom">
@@ -10274,21 +10239,21 @@ Our experiments so far have only scratched the surface of what is possible using
 </div>
 </div>
 <div class="post-share socials">
-<a aria-label="Share with Twitter" class="socials__item" data-href="https://twitter.com/intent/tweet?url=http://ai.googleblog.com/2023/04/beyond-automatic-differentiation.html&amp;text=Beyond automatic differentiation" onclick="shareSocial(this)" tabindex="0" target="_blank">
+<a aria-label="Share with Twitter" class="socials__item" data-href="https://twitter.com/intent/tweet?url=http://ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html&amp;text=Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots" onclick="shareSocial(this)" tabindex="0" target="_blank">
 <img alt="Twitter" src="https://research.google/static/images/blog/twitter.svg" title="Share with Twitter"/>
 </a>
-<a aria-label="Share with Facebook" class="socials__item" data-href="https://www.facebook.com/sharer.php?u=http://ai.googleblog.com/2023/04/beyond-automatic-differentiation.html" onclick="shareSocial(this)" tabindex="0" target="popup">
+<a aria-label="Share with Facebook" class="socials__item" data-href="https://www.facebook.com/sharer.php?u=http://ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html" onclick="shareSocial(this)" tabindex="0" target="popup">
 <img alt="Facebook" src="https://research.google/static/images/blog/facebook.svg" title="Share with Facebook"/>
 </a>
 </div>
 <div class="post-labels-sidebar">
 <span class="byline-label">Labels:</span>
 <span class="byline post-labels">
-<a class="label-link" href="http://ai.googleblog.com/search/label/Algorithms?max-results=11" rel="tag">
-Algorithms
+<a class="label-link" href="http://ai.googleblog.com/search/label/Reinforcement%20Learning?max-results=11" rel="tag">
+Reinforcement Learning
 </a>
-<a class="label-link" href="http://ai.googleblog.com/search/label/Machine%20Learning?max-results=11" rel="tag">
-Machine Learning
+<a class="label-link" href="http://ai.googleblog.com/search/label/Robotics?max-results=11" rel="tag">
+Robotics
 </a>
 </span>
 </div>
@@ -10370,7 +10335,7 @@ Machine Learning
 <h3 class="title" id="prevPostTitle"></h3>
 <div id="previousPosts">
 <script type="text/javascript">
-            fetchPreviousPosts("2023-04-14T08:00:00-07:00");
+            fetchPreviousPosts("2023-04-13T12:31:00-07:00");
           </script>
 </div>
 </div>
@@ -10741,10 +10706,10 @@ const hideOlderPostsBtn = () => {
 };
 hideOlderPostsBtn();
 //]]>    </script>
-<script src="https://www.blogger.com/static/v1/widgets/1852870454-widgets.js" type="text/javascript"></script>
+<script src="https://www.blogger.com/static/v1/widgets/2659626136-widgets.js" type="text/javascript"></script>
 <script type="text/javascript">
-window['__wavt'] = 'AOuZoY4COUzEYhqU2do3Pa_RxMmRWNYDLw:1681921809238';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d8474926331452026626','//ai.googleblog.com/2023/04/beyond-automatic-differentiation.html','8474926331452026626');
-_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '8474926331452026626', 'title': 'Google AI Blog', 'url': 'http://ai.googleblog.com/2023/04/beyond-automatic-differentiation.html', 'canonicalUrl': 'http://ai.googleblog.com/2023/04/beyond-automatic-differentiation.html', 'homepageUrl': 'http://ai.googleblog.com/', 'searchUrl': 'http://ai.googleblog.com/search', 'canonicalHomepageUrl': 'http://ai.googleblog.com/', 'blogspotFaviconUrl': 'http://ai.googleblog.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': false, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': 'UA-961555-69', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Google AI Blog - Atom\x22 href\x3d\x22http://ai.googleblog.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Google AI Blog - RSS\x22 href\x3d\x22http://ai.googleblog.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Google AI Blog - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/8474926331452026626/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Google AI Blog - Atom\x22 href\x3d\x22http://ai.googleblog.com/feeds/5107802027865733485/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/22ef833c5cfd1596', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '5107802027865733485', 'postImageThumbnailUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/s72-c/AutoBound-Crop.gif', 'postImageUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/s660/AutoBound-Crop.gif', 'pageName': 'Beyond automatic differentiation', 'pageTitle': 'Google AI Blog: Beyond automatic differentiation'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Beyond automatic differentiation', 'description': 'Posted by Matthew Streeter, Software Engineer, Google Research      Derivatives  play a central role in optimization and machine learning. B...', 'featuredImage': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/s660/AutoBound-Crop.gif', 'url': 'http://ai.googleblog.com/2023/04/beyond-automatic-differentiation.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 5107802027865733485}}, {'name': 'widgets', 'data': [{'title': 'Search This Blog1', 'type': 'BlogSearch', 'sectionId': 'bsectionSearchContainer', 'id': 'BlogSearch1'}, {'title': 'Search This Blog1', 'type': 'BlogSearch', 'sectionId': 'bsectionSearchContainer2', 'id': 'BlogSearch2'}, {'title': '', 'type': 'FeaturedPost', 'sectionId': 'page_body', 'id': 'FeaturedPost1', 'postId': '331432973525797076'}, {'title': 'Blog Posts', 'type': 'Blog', 'sectionId': 'page_body', 'id': 'Blog1', 'posts': [{'id': '5107802027865733485', 'title': 'Beyond automatic differentiation', 'featuredImage': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeF_4QxTZliBxybI6a8fpfDt-IC6AG1GkRjM6mQqSLQ64RQTP5BJYq8WcGkzss_Ft-5QF7nU36hT8CahVaq04fVThFV_zWbgbfutAzQU3g8yoghkEmb603znIRbX5jT74LQxBKQ1qKp6sx9GTKVEgcHaWJOpmiipwcuUj6FXC1_hCbqHHX05yMA_SaLw/s660/AutoBound-Crop.gif', 'showInlineAds': false}], 'headerByline': {'regionName': 'header1', 'items': [{'name': 'timestamp', 'label': ''}]}, 'footerBylines': [{'regionName': 'footer1', 'items': [{'name': 'icons', 'label': ''}, {'name': 'backlinks', 'label': ''}]}, {'regionName': 'footer3', 'items': [{'name': 'reactions', 'label': ''}]}], 'allBylineItems': [{'name': 'timestamp', 'label': ''}, {'name': 'icons', 'label': ''}, {'name': 'backlinks', 'label': ''}, {'name': 'reactions', 'label': ''}]}]}]);
+window['__wavt'] = 'AOuZoY6D9CzxcmZZxy-cvtFdZ3LoHWvanw:1681955779461';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d8474926331452026626','//ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html','8474926331452026626');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '8474926331452026626', 'title': 'Google AI Blog', 'url': 'http://ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html', 'canonicalUrl': 'http://ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html', 'homepageUrl': 'http://ai.googleblog.com/', 'searchUrl': 'http://ai.googleblog.com/search', 'canonicalHomepageUrl': 'http://ai.googleblog.com/', 'blogspotFaviconUrl': 'http://ai.googleblog.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': false, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': 'UA-961555-69', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Google AI Blog - Atom\x22 href\x3d\x22http://ai.googleblog.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Google AI Blog - RSS\x22 href\x3d\x22http://ai.googleblog.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Google AI Blog - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/8474926331452026626/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Google AI Blog - Atom\x22 href\x3d\x22http://ai.googleblog.com/feeds/8521407697493439122/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/22ef833c5cfd1596', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '8521407697493439122', 'postImageThumbnailUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/s72-c/Robotic%20RL%20hero.jpeg', 'postImageUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/s320/Robotic%20RL%20hero.jpeg', 'pageName': 'Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots', 'pageTitle': 'Google AI Blog: Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots', 'description': 'Posted by Sergey Levine, Research Scientist, and Alexander Herzog, Staff Research Software Engineer, Google Research, Brain Team            ...', 'featuredImage': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/s320/Robotic%20RL%20hero.jpeg', 'url': 'http://ai.googleblog.com/2023/04/robotic-deep-rl-at-scale-sorting-waste.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 8521407697493439122}}, {'name': 'widgets', 'data': [{'title': 'Search This Blog1', 'type': 'BlogSearch', 'sectionId': 'bsectionSearchContainer', 'id': 'BlogSearch1'}, {'title': 'Search This Blog1', 'type': 'BlogSearch', 'sectionId': 'bsectionSearchContainer2', 'id': 'BlogSearch2'}, {'title': '', 'type': 'FeaturedPost', 'sectionId': 'page_body', 'id': 'FeaturedPost1', 'postId': '6000199110548559167'}, {'title': 'Blog Posts', 'type': 'Blog', 'sectionId': 'page_body', 'id': 'Blog1', 'posts': [{'id': '8521407697493439122', 'title': 'Robotic deep RL at scale: Sorting waste and recyclables with a fleet of robots', 'featuredImage': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYhP7IrTnpGC_qxqzY9xaShL-JjOujpoWIEqWf-tccTefAx7xKsoD_74wwMq07kbZvvwAgiNPydbCAPMtbDYXz5roJaemUzqPc8AspgjV4lxB0Bln1YSLzzwgxNUT0EA7QDS0SDuwofleEqOgzF_5bIgb_rNnyMWKMTHhYH1OI0W5lDEym8wsP1G44A/s320/Robotic%20RL%20hero.jpeg', 'showInlineAds': false}], 'headerByline': {'regionName': 'header1', 'items': [{'name': 'timestamp', 'label': ''}]}, 'footerBylines': [{'regionName': 'footer1', 'items': [{'name': 'icons', 'label': ''}, {'name': 'backlinks', 'label': ''}]}, {'regionName': 'footer3', 'items': [{'name': 'reactions', 'label': ''}]}], 'allBylineItems': [{'name': 'timestamp', 'label': ''}, {'name': 'icons', 'label': ''}, {'name': 'backlinks', 'label': ''}, {'name': 'reactions', 'label': ''}]}]}]);
 _WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch1', 'bsectionSearchContainer', document.getElementById('BlogSearch1'), {}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch2', 'bsectionSearchContainer2', document.getElementById('BlogSearch2'), {}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_FeaturedPostView', new _WidgetInfo('FeaturedPost1', 'page_body', document.getElementById('FeaturedPost1'), {}, 'displayModeFull'));
