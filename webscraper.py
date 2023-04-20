@@ -7,7 +7,29 @@ import time
 import random
 
 
-class FlexibleWebscraper_V2:
+class FlexibleWebscraper:
+    """
+    This is a webscraper that can be used with almost any article website.
+
+    required params: url, article_link
+    optional params: baseurl, bs4_multi, bs4_single, regex_config
+    structure of params and examples of usage:
+    'url': 'hhtp://url to scrape.com',
+    'article_link': ('a', 'href', re.compile(r'http://ai.googleblog.com/20.*')),
+    'bs4_multi': {
+        'content': ('p', None, None),
+        'time': ('time', None, None),
+    },
+    'bs4_single': {
+        'title': ('title', None, None),
+        'author': ('p', 'id', 'newBylineAuthor')
+
+    },
+    'regex_config': {
+        'author': r'Posted by (.*?)</'
+    }
+    """
+
     def __init__(self, kwargs):
         self.kwargs = kwargs
         self.isChild = self.set_param_if_valid('is_child', False)
@@ -66,9 +88,11 @@ class FlexibleWebscraper_V2:
     def bs4_multi(self, key, element, attr=None, name=None):
         printblue('bs4_multi: element: {}, attr: {}, name: {}'.format(
             element, attr, name))
-        element = self.soup.find_all(element)
+
         if attr != None and name != None:
             element = self.soup.find_all(element, {attr: name})
+        else:
+            element = self.soup.find_all(element)
 
         if len(element) == 0:
             printyellow(
@@ -83,9 +107,11 @@ class FlexibleWebscraper_V2:
     def bs4_single(self, key, element, attr=None, name=None):
         printblue('bs4_single: element: {}, attr: {}, name: {}'.format(
             element, attr, name))
-        element = self.soup.find(element)
+        
         if attr != None and name != None:
             element = self.soup.find(element, {attr: name})
+        else:
+            element = self.soup.find(element)
 
         if not element:
             printyellow('No elements found for: {} Pass: {}\n'.format(
@@ -99,28 +125,28 @@ class FlexibleWebscraper_V2:
     # in case one fails
 
     def find_article_data(self):
-        current_article_data = {'url': self.url}
+        current_article_data={'url': self.url}
         for key, params in self.bs4_multi_config.items():
             if key not in current_article_data:
-                current_article_data[key] = self.bs4_multi(key, *params)
+                current_article_data[key]=self.bs4_multi(key, *params)
         for key, params in self.bs4_single_config.items():
             if key not in current_article_data:
-                current_article_data[key] = self.bs4_single(key, *params)
+                current_article_data[key]=self.bs4_single(key, *params)
         for key, regex in self.regex_config.items():
             if key not in current_article_data:
-                current_article_data[key] = self.regex_pass(key, regex)
+                current_article_data[key]=self.regex_pass(key, regex)
         return current_article_data
 
     def get_article_links(self, element, attr=None, name=None):
         if attr and name:
-            links = [element['href'] for element in self.soup.find_all(
+            links=[element['href'] for element in self.soup.find_all(
                 element, {attr: name})]
         else:
-            links = [element['href']
+            links=[element['href']
                      for element in self.soup.find_all(element)]
 
-        unique_links = list(set(links))
-        links = unique_links
+        unique_links=list(set(links))
+        links=unique_links
 
         if len(links) == 0:
             raise Exception('No links found')
@@ -130,20 +156,20 @@ class FlexibleWebscraper_V2:
         return links
 
     def automate_scrape(self):
-        self.links = self.get_article_links(*self.article_link)
-
+        self.links=self.get_article_links(*self.article_link)
+        
         for link in self.links:
-            childparams = {
+            childparams={
                 'is_child': True,
                 'url': link,
                 'bs4_single': self.bs4_single_config,
                 'bs4_multi': self.bs4_multi_config,
                 'regex_config': self.regex_config
             }
-            with FlexibleWebscraper_V2(childparams) as scraper:
-                data = scraper.find_article_data()
+            with FlexibleWebscraper(childparams) as scraper:
+                data=scraper.find_article_data()
                 self.pc_article_data_pretty(data)
-            time.sleep(2 + random.randint(0, 3))
+            time.sleep(5 + random.randint(0, 3))
 
     def pc_article_data_pretty(self, data):
         print()
@@ -157,7 +183,7 @@ class FlexibleWebscraper_V2:
         print()
 
 
-params = {
+params={
     'url': 'https://ai.googleblog.com/',
     'article_link': ('a', 'href', re.compile(r'http://ai.googleblog.com/20.*')),
     'bs4_multi': {
@@ -176,7 +202,7 @@ params = {
 
 
 def main():
-    with FlexibleWebscraper_V2(params) as scraper:
+    with FlexibleWebscraper(params) as scraper:
         scraper.automate_scrape()
         pass
 
