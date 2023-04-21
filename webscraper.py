@@ -35,18 +35,44 @@ class FlexibleWebscraper:
         self.isChild = self.set_param_if_valid('is_child', False)
 
         self.url = self.set_param_if_valid('url', None, required=True)
-        self.article_link = self.set_param_if_valid(
-            'article_link', None, required=not self.isChild)
 
         self.baseurl = self.set_param_if_valid('baseurl', '')
         self.bs4_multi_config = self.set_param_if_valid('bs4_multi', {})
         self.bs4_single_config = self.set_param_if_valid('bs4_single', {})
         self.regex_config = self.set_param_if_valid('regex_config', {})
+        self.bs4_element_attr_config = self.set_param_if_valid(
+            'bs4_attr', {})
+        self.link_filter = self.set_param_if_valid('link_filter', None)
 
-        self.soup = BeautifulSoup(requests.get(self.url).text, 'html.parser')
+        self.soup = self.make_the_soup(self.url, self.baseurl)
         self.soupy_text = str(self.soup)
-        with open('soupy_text.log', 'w') as f:
-            f.write(self.soupy_text)
+        # try:
+        #     self.soup = BeautifulSoup(
+        #         requests.get(self.url).text, 'html.parser')
+
+        #     self.soupy_text = str(self.soup)
+
+        #     with open('soupy_text.log', 'w') as f:
+        #         f.writelines(self.soupy_text)
+        # except Exception as e:
+        #     if e == requests.exceptions.MissingSchema:
+        #         printred('Missing Schema. Moving on...')
+
+    def make_the_soup(self, url, baseurl):
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+        try:
+            stock = BeautifulSoup(requests.get(
+                url, headers=headers).text, 'html.parser')
+            return stock
+        except Exception as e:
+            if e == requests.exceptions.MissingSchema:
+                try:
+                    stock = BeautifulSoup(requests.get(
+                        baseurl + url, headers=headers).text, 'html.parser')
+                    return stock
+                except:
+                    return None
 
     def set_param_if_valid(self, param, default, required=False):
         if param in self.kwargs:
@@ -107,7 +133,7 @@ class FlexibleWebscraper:
     def bs4_single(self, key, element, attr=None, name=None):
         printblue('bs4_single: element: {}, attr: {}, name: {}'.format(
             element, attr, name))
-        
+
         if attr != None and name != None:
             element = self.soup.find(element, {attr: name})
         else:
@@ -119,56 +145,99 @@ class FlexibleWebscraper:
             return -1
         printgreen('Found Single key: {}\n Result {}\n Pass: {}\n'.format(
             key.upper(), element.text, 'bs4_multi'))
-        return element.text
+        return element.text.strip()
+
+    def bs4_element_attr(self, key, element, attr=None, name=None, toget=None):
+        printblue('bs4_attr: element: {}, attr: {}, name: {}'.format(
+            element, attr, name))
 
     # you can do multiple passes with the same key
     # in case one fails
 
     def find_article_data(self):
-        current_article_data={'url': self.url}
+
+        current_article_data = {'url': self.baseurl + self.url}
         for key, params in self.bs4_multi_config.items():
             if key not in current_article_data:
-                current_article_data[key]=self.bs4_multi(key, *params)
+                current_article_data[key] = self.bs4_multi(key, *params)
         for key, params in self.bs4_single_config.items():
             if key not in current_article_data:
-                current_article_data[key]=self.bs4_single(key, *params)
+                current_article_data[key] = self.bs4_single(key, *params)
         for key, regex in self.regex_config.items():
             if key not in current_article_data:
-                current_article_data[key]=self.regex_pass(key, regex)
+                current_article_data[key] = self.regex_pass(key, regex)
+        for key, params in self.bs4_element_attr_config.items():
+            if key not in current_article_data:
+                current_article_data[key] = self.bs4_element_attr(key, *params)
+
+        # if any of the values are -1, then the article is not valid
+        if -1 in current_article_data.values():
+            printred('Article is not valid for: {}\n'.format(self.url))
+            return -1
+
         return current_article_data
 
-    def get_article_links(self, element, attr=None, name=None):
-        if attr and name:
-            links=[element['href'] for element in self.soup.find_all(
-                element, {attr: name})]
-        else:
-            links=[element['href']
-                     for element in self.soup.find_all(element)]
+    def get_article_links(self):
 
-        unique_links=list(set(links))
-        links=unique_links
+        links = []
+        if 'article_link' in self.bs4_single_config:
+            links += [self.baseurl + element['href'] for element in self.soup.find(
+                *self.bs4_single_config['article_link'])]
+        if 'article_link' in self.bs4_multi_config:
+            links += [self.baseurl + element['href'] for element in self.soup.find_all(
+                *self.bs4_multi_config['article_link'])]
+        if 'article_link' in self.regex_config:
+            links = [self.baseurl + href for href in re.findall(
+                self.regex_config['article_link'], self.soupy_text)]
+
+        if self.link_filter != None:
+            links = self.link_filter(links)
+        else:
+            links = list(set(links))
 
         if len(links) == 0:
             raise Exception('No links found')
 
-        print()
-        printblue('Found {} links\n'.format(len(links)))
+        printblue('Found {} links {}\n'.format(len(links), links[:5]))
         return links
 
+    # def get_article_links(self, element, attr=None, name=None):
+    #     if attr and name:
+
+    #         links = [element['href'] for element in self.soup.find_all(
+    #             element, {attr: name})]
+
+    #         printred(links[0])
+    #     else:
+    #         links = [element['href']
+    #                  for element in self.soup.find_all(element)]
+
+    #     unique_links = list(set(links))
+    #     links = unique_links
+
+    #     if len(links) == 0:
+    #         raise Exception('No links found')
+
+    #     print()
+    #     printblue('Found {} links {}\n'.format(len(links), links[:5]))
+    #     return links
+
     def automate_scrape(self):
-        self.links=self.get_article_links(*self.article_link)
-        
+        self.links = self.get_article_links()
+
         for link in self.links:
-            childparams={
+            childparams = {
                 'is_child': True,
                 'url': link,
                 'bs4_single': self.bs4_single_config,
                 'bs4_multi': self.bs4_multi_config,
-                'regex_config': self.regex_config
+                'regex_config': self.regex_config,
+                'bs4_element_attr_config': self.bs4_element_attr_config
             }
             with FlexibleWebscraper(childparams) as scraper:
-                data=scraper.find_article_data()
-                self.pc_article_data_pretty(data)
+                data = scraper.find_article_data()
+                if data != -1:
+                    self.pc_article_data_pretty(data)
             time.sleep(5 + random.randint(0, 3))
 
     def pc_article_data_pretty(self, data):
@@ -183,7 +252,7 @@ class FlexibleWebscraper:
         print()
 
 
-params={
+params = {
     'url': 'https://ai.googleblog.com/',
     'article_link': ('a', 'href', re.compile(r'http://ai.googleblog.com/20.*')),
     'bs4_multi': {
@@ -197,6 +266,9 @@ params={
     },
     'regex_config': {
         'author': r'Posted by (.*?)</'
+    },
+    'bs4_element_attr_config': {
+        'time': ('time', 'datetime', re.compile(r'20.*')),
     }
 }
 

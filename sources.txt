@@ -1,6 +1,5 @@
 Source,URL
 VentureBeat AI,https://venturebeat.com/category/ai/
-AI Trends,https://www.aitrends.com/
 TechCrunch AI,https://techcrunch.com/tag/ai/
 The Verge AI,https://www.theverge.com/ai/
 MIT Technology Review,https://www.technologyreview.com/topic/artificial-intelligence/

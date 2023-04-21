@@ -1,4 +1,4 @@
 beautifulsoup4==4.12.2
+pandas==2.0.0
 pretty_errors==1.2.25
 Requests==2.28.2
-selenium==4.8.3
