@@ -1,282 +1,163 @@
-import pretty_errors
-import requests
-from bs4 import BeautifulSoup
-from print_prettier import printred, printgreen, printyellow, printblue, printfinish, printcyan
+import functools
+import random
 import re
 import time
-import random
+import selenium
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
+from print_prettier import printblue, printcyan, printfinish, printgreen, printred, printyellow
 
 
-class FlexibleWebscraper:
-    """
-    This is a webscraper that can be used with almost any article website.
-
-    required params: url, article_link
-    optional params: baseurl, bs4_multi, bs4_single, regex_config
-    structure of params and examples of usage:
-    'url': 'hhtp://url to scrape.com',
-    'article_link': ('a', 'href', re.compile(r'http://ai.googleblog.com/20.*')),
-    'bs4_multi': {
-        'content': ('p', None, None),
-        'time': ('time', None, None),
-    },
-    'bs4_single': {
-        'title': ('title', None, None),
-        'author': ('p', 'id', 'newBylineAuthor')
-
-    },
-    'regex_config': {
-        'author': r'Posted by (.*?)</'
-    }
-    """
-
-    def __init__(self, kwargs):
-        self.kwargs = kwargs
-        self.isChild = self.set_param_if_valid('is_child', False)
-
-        self.url = self.set_param_if_valid('url', None, required=True)
-
-        self.baseurl = self.set_param_if_valid('baseurl', '')
-        self.bs4_multi_config = self.set_param_if_valid('bs4_multi', {})
-        self.bs4_single_config = self.set_param_if_valid('bs4_single', {})
-        self.regex_config = self.set_param_if_valid('regex_config', {})
-        self.bs4_element_attr_config = self.set_param_if_valid(
-            'bs4_attr', {})
-        self.link_filter = self.set_param_if_valid('link_filter', None)
-
-        self.soup = self.make_the_soup(self.url, self.baseurl)
-        self.soupy_text = str(self.soup)
-        # try:
-        #     self.soup = BeautifulSoup(
-        #         requests.get(self.url).text, 'html.parser')
-
-        #     self.soupy_text = str(self.soup)
-
-        #     with open('soupy_text.log', 'w') as f:
-        #         f.writelines(self.soupy_text)
-        # except Exception as e:
-        #     if e == requests.exceptions.MissingSchema:
-        #         printred('Missing Schema. Moving on...')
-
-    def make_the_soup(self, url, baseurl):
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+def error_handling(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
         try:
-            stock = BeautifulSoup(requests.get(
-                url, headers=headers).text, 'html.parser')
-            return stock
+            printcyan('Class: {} | Function: {}'.format(
+                func.__class__.__name__, func.__name__))
+            func(*args, **kwargs)
+        except selenium.common.exceptions.NoSuchElementException as e:
+            errormessage = str(e).split('\n')[0]
+            message = 'NoSuchElementException: \n\t{}'.format(errormessage)
+            printyellow(message)
+        except KeyboardInterrupt:
+            printred('KeyboardInterrupt')
         except Exception as e:
-            if e == requests.exceptions.MissingSchema:
-                try:
-                    stock = BeautifulSoup(requests.get(
-                        baseurl + url, headers=headers).text, 'html.parser')
-                    return stock
-                except:
-                    return None
+            printyellow(
+                'Errortype: \n\t{} \n Error: \n\t{}'.format(type(e), e))
+    return wrapper
 
-    def set_param_if_valid(self, param, default, required=False):
-        if param in self.kwargs:
-            return self.kwargs[param]
-        else:
-            if required:
-                raise Exception('No {} provided'.format(param))
-            return default
 
+class WebScraper:
+    @error_handling
+    def __init__(self, url, **kwargs):
+        self.__dict__.update(kwargs)
+        self.url = url
+
+        options = webdriver.ChromeOptions()
+        options.add_argument('--headless')
+        self.driver = webdriver.Chrome(service=ChromeService(
+            ChromeDriverManager().install()), options=options)
+        self.driver.get(self.url)
+
+    @error_handling
     def __enter__(self):
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        pass
+    @error_handling
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.driver.quit()
 
-    def get_paragraphs(self, link):
-        paragraphs = self.soup.find_all('p')
-        return '\n'.join([paragraph.text for paragraph in paragraphs]).lstrip()[1:]
+    @error_handling
+    def get_links(self):
+        article_links = self.driver.find_elements(
+            By.XPATH, '//a[@href]')
+        links = [link.get_attribute('href') for link in article_links]
 
-    def regex_pass(self, key, regexstr):
-        printblue('regex_pass: regexstr: {}, key: {}'.format(
-            regexstr, key.upper()))
+        self.links = links
 
-        match = re.findall(regexstr, self.soupy_text)
+    @error_handling
+    def get_paragraphs(self):
+        paragraphs = self.driver.find_elements(By.XPATH, self.paragraphsearch)
+        self.paragraphs = '\n'.join(
+            [paragraph.text for paragraph in paragraphs])
 
-        if len(match) == 0:
-            printyellow(
-                'No elements found for: {} Pass: {}\n'.format(key, 'regex_pass'))
-            return -1
-        elif len(match) > 1:
-            printyellow(
-                'Multiple elements found for: {} Pass: {}\n'.format(key, 'regex_pass'))
-            return ' '.join(match).strip()
+    @error_handling
+    def get_titles(self):
+        title = self.driver.find_elements(By.XPATH, self.titlesearch)
+        titles = []
+        for copy in title:
+            if copy.text not in title:
+                titles.append(copy.text)
+        self.title = ' '.join(titles)
 
-        printgreen('Found regex key: {}\n Result {}\n Pass: {}\n'.format(
-            key.upper(), match[0].strip(), 'regex_pass'))
-        return match[0].strip()
+    @error_handling
+    def get_author(self):
+        author = self.driver.find_elements(By.XPATH, self.authorsearch)
+        authors = []
+        for copy in author:
+            if copy.text not in authors:
+                authors.append(copy.text)
+        self.author = ' '.join(authors)
 
-    def bs4_multi(self, key, element, attr=None, name=None):
-        printblue('bs4_multi: element: {}, attr: {}, name: {}'.format(
-            element, attr, name))
+    @error_handling
+    def get_time(self):
+        self.time = self.driver.find_element(By.XPATH, self.timesearch)
 
-        if attr != None and name != None:
-            element = self.soup.find_all(element, {attr: name})
-        else:
-            element = self.soup.find_all(element)
-
-        if len(element) == 0:
-            printyellow(
-                'No elements found for: {} Pass: {}\n'.format(key, 'bs4_multi'))
-            return -1
-
-        result = ' '.join([element.text for element in element]).strip()
-        printgreen('Found Multi key: {}\n Result {}\n Pass: {}\n'.format(
-            key.upper(), result[:100], 'bs4_multi'))
-        return result
-
-    def bs4_single(self, key, element, attr=None, name=None):
-        printblue('bs4_single: element: {}, attr: {}, name: {}'.format(
-            element, attr, name))
-
-        if attr != None and name != None:
-            element = self.soup.find(element, {attr: name})
-        else:
-            element = self.soup.find(element)
-
-        if not element:
-            printyellow('No elements found for: {} Pass: {}\n'.format(
-                key, 'bs4_single'))
-            return -1
-        printgreen('Found Single key: {}\n Result {}\n Pass: {}\n'.format(
-            key.upper(), element.text, 'bs4_multi'))
-        return element.text.strip()
-
-    def bs4_element_attr(self, key, element, attr=None, name=None, toget=None):
-        printblue('bs4_attr: element: {}, attr: {}, name: {}'.format(
-            element, attr, name))
-
-    # you can do multiple passes with the same key
-    # in case one fails
-
-    def find_article_data(self):
-
-        current_article_data = {'url': self.baseurl + self.url}
-        for key, params in self.bs4_multi_config.items():
-            if key not in current_article_data:
-                current_article_data[key] = self.bs4_multi(key, *params)
-        for key, params in self.bs4_single_config.items():
-            if key not in current_article_data:
-                current_article_data[key] = self.bs4_single(key, *params)
-        for key, regex in self.regex_config.items():
-            if key not in current_article_data:
-                current_article_data[key] = self.regex_pass(key, regex)
-        for key, params in self.bs4_element_attr_config.items():
-            if key not in current_article_data:
-                current_article_data[key] = self.bs4_element_attr(key, *params)
-
-        # if any of the values are -1, then the article is not valid
-        if -1 in current_article_data.values():
-            printred('Article is not valid for: {}\n'.format(self.url))
-            return -1
-
-        return current_article_data
-
-    def get_article_links(self):
-
-        links = []
-        if 'article_link' in self.bs4_single_config:
-            links += [self.baseurl + element['href'] for element in self.soup.find(
-                *self.bs4_single_config['article_link'])]
-        if 'article_link' in self.bs4_multi_config:
-            links += [self.baseurl + element['href'] for element in self.soup.find_all(
-                *self.bs4_multi_config['article_link'])]
-        if 'article_link' in self.regex_config:
-            links = [self.baseurl + href for href in re.findall(
-                self.regex_config['article_link'], self.soupy_text)]
-
-        if self.link_filter != None:
-            links = self.link_filter(links)
-        else:
-            links = list(set(links))
-
-        if len(links) == 0:
-            raise Exception('No links found')
-
-        printblue('Found {} links {}\n'.format(len(links), links[:5]))
-        return links
-
-    # def get_article_links(self, element, attr=None, name=None):
-    #     if attr and name:
-
-    #         links = [element['href'] for element in self.soup.find_all(
-    #             element, {attr: name})]
-
-    #         printred(links[0])
-    #     else:
-    #         links = [element['href']
-    #                  for element in self.soup.find_all(element)]
-
-    #     unique_links = list(set(links))
-    #     links = unique_links
-
-    #     if len(links) == 0:
-    #         raise Exception('No links found')
-
-    #     print()
-    #     printblue('Found {} links {}\n'.format(len(links), links[:5]))
-    #     return links
-
+    @error_handling
     def automate_scrape(self):
-        self.links = self.get_article_links()
+        for link in self.article_links:
+            self.driver.get(link)
+            self.get_paragraphs()
+            self.get_titles()
+            self.get_author()
+            self.parse_time()
 
+            self.print_data()
+            time.sleep(2 + random.randint(0, 4))
+
+
+class TheVergeScraper(WebScraper):
+    @error_handling
+    def __init__(self):
+        # this could change
+        kwargs = {
+            'paragraphsearch': '//div[@class="duet--article--article-body-component"]//p',
+            'titlesearch': '//h1',
+            'authorsearch': '//a[contains(@href, "author")]',
+            'timesearch': '//time'
+        }
+
+        # this could change
+        super().__init__('https://www.theverge.com/ai-artificial-intelligence', **kwargs)
+
+        self.get_links()
+        self.filter_article_links()
+        self.automate_scrape()
+
+    @error_handling
+    def parse_time(self):
+        self.get_time()
+        self.time = self.time.get_attribute('datetime')
+
+    @error_handling
+    def filter_article_links(self):
+        regex = r'\d{4}\/?\d{1,2}\/?\d{1,2}'  # this could change
+        self.article_links = []
         for link in self.links:
-            childparams = {
-                'is_child': True,
-                'url': link,
-                'bs4_single': self.bs4_single_config,
-                'bs4_multi': self.bs4_multi_config,
-                'regex_config': self.regex_config,
-                'bs4_element_attr_config': self.bs4_element_attr_config
-            }
-            with FlexibleWebscraper(childparams) as scraper:
-                data = scraper.find_article_data()
-                if data != -1:
-                    self.pc_article_data_pretty(data)
-            time.sleep(5 + random.randint(0, 3))
+            if link not in self.article_links:
+                matches = re.findall(regex, link)
+                if len(matches) > 0:
+                    self.article_links.append(link)
 
-    def pc_article_data_pretty(self, data):
-        print()
+        printfinish('Found {} links: {}'.format(
+            len(self.article_links), self.article_links[:5]))
+
+    @error_handling
+    def collect_data(self):
+        self.data = {
+            'title': self.title,
+            'author': self.author,
+            'time': self.time,
+            'paragraphs': self.paragraphs,
+            'link': self.driver.current_url,
+        }
+
+    @error_handling
+    def print_data(self):
         printfinish()
-        printfinish('Title: {}'.format(data['title']))
-        printfinish('Author: {}'.format(data['author']))
-        printfinish('Time: {}'.format(data['time']))
-        printfinish('Content: {}'.format(data['content'][:100]))
-        printfinish('URL: {}'.format(data['url']))
+        printblue('ANum rticle Links: {}'.format(len(self.article_links)))
+        printblue('Title: {}'.format(self.title))
+        printblue('Author: {}'.format(self.author))
+        printblue('Time: {}'.format(self.time))
+        printblue('Paragraphs: {}'.format(self.paragraphs[:200]))
         printfinish()
-        print()
-
-
-params = {
-    'url': 'https://ai.googleblog.com/',
-    'article_link': ('a', 'href', re.compile(r'http://ai.googleblog.com/20.*')),
-    'bs4_multi': {
-        'content': ('p', None, None),
-        'time': ('time', None, None),
-    },
-    'bs4_single': {
-        'title': ('title', None, None),
-        # 'author': ('p', 'id', 'newBylineAuthor')
-
-    },
-    'regex_config': {
-        'author': r'Posted by (.*?)</'
-    },
-    'bs4_element_attr_config': {
-        'time': ('time', 'datetime', re.compile(r'20.*')),
-    }
-}
 
 
 def main():
-    with FlexibleWebscraper(params) as scraper:
-        scraper.automate_scrape()
-        pass
+    with TheVergeScraper() as scraper:
+        time.sleep(2)
 
 
 if __name__ == '__main__':
